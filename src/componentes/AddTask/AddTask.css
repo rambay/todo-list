@@ -13,10 +13,10 @@ h2 {
 }
 
 .imageAddTask {
-    width: 350px;
-    bottom: -40px;
+    width: 250px;
+    bottom: -20px;
     position: absolute;
-    left: -100px;
+    left: -40px;
 }
 
 form textarea {
@@ -39,7 +39,7 @@ button {
     background-color: #46dd46;
     color: #181818;
     border-radius: 8px;
-    padding: 12px;
+    padding: 8px;
     border: 0;
     cursor: pointer;
 }

@@ -33,7 +33,6 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "https://platzi.github.io/todo-list",
   "devDependencies": {
     "gh-pages": "^6.1.0"
   }

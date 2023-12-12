@@ -12,7 +12,7 @@
 }
 
 .title {
-    font-size: 60px;
+    font-size: 32px;
     margin: 0;
     text-align: center;
     color: #fff;
@@ -25,11 +25,19 @@
         grid-template-columns: 1fr;
         margin: 0 auto;
     }
+
+    .title {
+        margin: 1em 0;
+    }
 }
 
 @media screen and (max-width: 800px) {
     .app {
         padding: 40px;
         width: 100%;
+    }
+
+    .title {
+        margin: 0;
     }
 }

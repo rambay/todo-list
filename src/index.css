@@ -5,9 +5,9 @@
 body {
   margin: 0;
   padding: 0;
+  height: 100vh;
   font-family: 'Montserrat', sans-serif;
   background: linear-gradient(to bottom, #4968EB, #1a94c4);
-  height: 100vh;
 }
 
 @media screen and (max-width: 1024px) {

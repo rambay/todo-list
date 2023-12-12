@@ -21,6 +21,8 @@ li {
 
 p {
     font-weight: 300;
+    margin: 8px 0;
+    font-size: 12px;
 }
 
 .listItems {
