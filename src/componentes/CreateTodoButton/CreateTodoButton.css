@@ -12,6 +12,10 @@
     margin: 8px 0;
     box-shadow: 1px 1px 13px 1px rgba(0, 0, 0, 0.4);
     z-index: 2;
+    animation-duration: 1.2s;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
 }
 
 .iconAdd svg {
@@ -19,10 +23,7 @@
 }
 
 .iconAdd:hover {
-    animation-name: rotateIcon;
-    animation-duration: .6s;
-    animation-fill-mode: forwards;
-    animation-direction: normal;
+    animation-name: bounce;
 }
 
 .iconAddContainer {
@@ -30,16 +31,19 @@
     justify-content: flex-end;
 }
 
-@keyframes rotateIcon {
-    0% {
-        transform: rotate(0deg);
-        transition: .4s ease-in;
-    }
-
-    100% {
-        transform: rotate(405deg);
-        transition: .4s ease-out;
-    }
+@keyframes bounce {
+    0%, 100%, 20%, 50%, 80% {
+		transform: translateY(0);
+        transition: 4s ease;
+	}
+	40% {
+	    transform: translateY(-15px);
+        transition: 4s ease;
+	}
+	60% {
+        transform: translateY(-7px);
+        transition: 4s ease;
+	}
 }
 
 @media screen and (min-width:800px) {
