@@ -1,0 +1,24 @@
+input[name="search"] {
+    display: block;
+    margin: 8px 0;
+    width: 100%;
+    line-height: 2;
+    border-radius: 20px;
+    outline: none;
+    border: 0;
+    color: #fff;
+    width: 380px;
+    padding: 8px 1em;
+    background-color: rgb(32, 33, 105, .2);
+    text-align: center;
+}
+
+input[name="search"]::placeholder {
+    color: #ffffff64;
+}
+
+@media screen and (max-width: 1024px) {
+    input[name="search"] {
+        width: 100%;
+    }
+}

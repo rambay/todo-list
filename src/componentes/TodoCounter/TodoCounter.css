@@ -1,0 +1,40 @@
+.TodoCounter {
+    margin: 1em 0;
+    color: #fff;
+    background-color: #0b145a;
+    box-shadow: 1px 1px 13px 1px rgba(0, 0, 0, 0.88);
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.pogress-completedTodos__subtitle {
+    color: #9b9898;
+    margin: 0;
+    font-size: 14px;
+}
+
+.pogress-completedTodos__title {
+    margin: 4px 0;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+p>span {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.pogress-completedTodos__bar {
+    margin-top: 12px;
+    height: 10px;
+    border-radius: 20px;
+    width: 100%;
+    overflow: hidden;
+    background-color: #6e85c1;
+}
+
+.progreessActive {
+    display: block;
+    height: 10px;
+    background-color: #46dd46;
+}

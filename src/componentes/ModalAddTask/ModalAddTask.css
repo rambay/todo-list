@@ -1,0 +1,49 @@
+.ModalAddTask {
+    position: absolute;
+    display: flex;
+    padding: 40px;
+    flex-direction: column;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    justify-content: center;
+    align-content: center;
+    background-color: rgba(0, 0, 0, .8);
+    text-align: center;
+    z-index: 0;
+}
+
+.ModalAddTask__title {
+    font-size: 24px;
+    color: #fff;
+}
+
+.ModalAddTaskForm__form {
+    padding: 16px;
+    font-size: 20px;
+}
+
+.ModalAddTaskForm__button--clear {
+    background-color: crimson;
+    margin-right: 8px;
+}
+
+.ModalAddTaskForm__button--clear:hover {
+    background-color: #ff0033;
+}
+
+.ModalAddTaskForm__button--success {
+    background-color: lawngreen;
+    margin-right: 8px;
+}
+
+.ModalAddTaskForm__button--success:hover {
+    background-color: #73d80e;
+}
+
+@media screen and (min-width: 800px) {
+    .Modal {
+        display: none;
+    }
+}

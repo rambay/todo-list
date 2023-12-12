@@ -1,0 +1,65 @@
+.addTask {
+    position: relative;
+    padding: 20px;
+    border-radius: 12px;
+    height: 100%;
+    background-color: #0b145a;
+    box-shadow: 1px 1px 13px 1px rgba(0, 0, 0, 0.88);
+}
+
+h2 {
+    font-size: 18px;
+    color: #fff;
+}
+
+.imageAddTask {
+    width: 350px;
+    bottom: -40px;
+    position: absolute;
+    left: -100px;
+}
+
+form textarea {
+    display: block;
+    background: #181e46 !important;
+    box-shadow: 1px 1px 11px 1px rgba(0, 0, 0, 0.53) inset;
+    line-height: 2;
+    border-radius: 12px;
+    border: 0;
+    height: 80px;
+    width: 100%;
+    padding: 8px 1em;
+    margin: 12px auto;
+    resize: none;
+    outline: none;
+    color: #46dd46;
+}
+
+button {
+    background-color: #46dd46;
+    color: #181818;
+    border-radius: 8px;
+    padding: 12px;
+    border: 0;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1024px) {
+    .addTask {
+        text-align: center;
+    }
+
+    .imageAddTask {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .addTask {
+        display: none;
+    }
+
+    .addTaskModal {
+        display: initial;
+    }
+}

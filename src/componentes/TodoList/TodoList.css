@@ -1,0 +1,10 @@
+.listaTodos {
+    margin: 0;
+    padding: 12px;
+    height: 350px;
+    overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}

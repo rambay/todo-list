@@ -1,0 +1,35 @@
+#root {
+    height: 100%;
+}
+
+.app {
+    display: grid;
+    height: 100%;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    align-content: center;
+    column-gap: 40px;
+}
+
+.title {
+    font-size: 60px;
+    margin: 0;
+    text-align: center;
+    color: #fff;
+}
+
+@media screen and (max-width: 1024px) {
+    .app {
+        height: initial;
+        padding: 40px;
+        grid-template-columns: 1fr;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .app {
+        padding: 40px;
+        width: 100%;
+    }
+}

@@ -1,0 +1,8 @@
+.textSkeleton {
+    margin: 0 8px;
+}
+
+.baseSkeleton {
+    display: flex;
+    background-color: transparent;
+}

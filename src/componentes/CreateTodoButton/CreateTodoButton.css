@@ -1,0 +1,48 @@
+.iconAdd {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #1d1d1d;
+    padding: 12px;
+    font-size: 30px;
+    cursor: pointer;
+    box-shadow: 1px 1px 13px 1px rgba(0, 0, 0, 0.4);
+    z-index: 2;
+}
+
+.iconAdd svg {
+    fill: #46dd46;
+}
+
+.iconAdd:hover {
+    animation-name: rotateIcon;
+    animation-duration: .6s;
+    animation-fill-mode: forwards;
+    animation-direction: normal;
+}
+
+.iconAddContainer {
+    display: flex;
+    justify-content: flex-end;
+}
+
+@keyframes rotateIcon {
+    0% {
+        transform: rotate(0deg);
+        transition: .4s ease-in;
+    }
+
+    100% {
+        transform: rotate(405deg);
+        transition: .4s ease-out;
+    }
+}
+
+@media screen and (min-width:800px) {
+    .iconAdd {
+        display: none;
+    }
+}
