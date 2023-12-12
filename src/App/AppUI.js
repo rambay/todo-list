@@ -10,50 +10,68 @@ import { useContext } from "react";
 import { TodoContext } from "../TodoContext";
 import { CreateTodoButton } from "../componentes/CreateTodoButton";
 import { Modal } from "../componentes/Modal";
+import { ImFileEmpty } from "react-icons/im";
 
 function AppUI() {
-    const { loading, error, searchTodosFilter, onCompletedTodo, onDeleteTodo, openModal } = useContext(TodoContext);
+  const {
+    loading,
+    error,
+    searchTodosFilter,
+    onCompletedTodo,
+    onDeleteTodo,
+    openModal,
+  } = useContext(TodoContext);
 
-    return (
-        <main className='app'>
-            <div>
-                <AddTask />
+  return (
+    <main className="app">
+      <div className="AddTaskContainer">
+        <AddTask />
+      </div>
+      <div className="listTasks">
+        <h1 className="title">Mis Tareas</h1>
+        {loading && (
+          <Skeleton
+            style={{ display: "block", margin: "0 auto", textAlign: "center" }}
+            width={300}
+            height={25}
+          />
+        )}
+        {!loading && <TodoCounter />}
+        <TodoSearch />
+
+        <TodoList>
+          {loading && (
+            <>
+              <TodosLoading />
+              <TodosLoading />
+              <TodosLoading />
+              <TodosLoading />
+            </>
+          )}
+          {error && <TodosError />}
+          {searchTodosFilter <= 0 && !loading && (
+            <div className="emptyTodos">
+              <ImFileEmpty />
+              <p className="emptyTodos__title">Crea tu primera tarea</p>
             </div>
-            <div className="listTasks">
-                <h1 className="title">Mis Tareas</h1>
-                {loading && <Skeleton style={{ display: 'block', margin: '0 auto', textAlign: 'center' }} width={300} height={25} />}
-                {!loading && <TodoCounter />}
-                <TodoSearch />
+          )}
 
-                <TodoList>
-                    {loading && (
-                        <>
-                            <TodosLoading />
-                            <TodosLoading />
-                            <TodosLoading />
-                            <TodosLoading />
-                        </>
-                    )}
-                    {error && <TodosError />}
-                    {searchTodosFilter <= 0 && !loading && <p>Crea tu primera tarea</p>}
+          {searchTodosFilter.map(({ task, completed }) => (
+            <TodoItem
+              key={task}
+              task={task}
+              complete={completed}
+              onCompletedTodo={() => onCompletedTodo(task)}
+              onDeleteTodo={() => onDeleteTodo(task)}
+            />
+          ))}
+        </TodoList>
+        <CreateTodoButton />
 
-                    {
-                        searchTodosFilter.map(({ task, completed }) => (
-                            <TodoItem key={task} task={task} complete={completed} onCompletedTodo={() => onCompletedTodo(task)} onDeleteTodo={() => onDeleteTodo(task)} />
-                        ))
-                    }
-                </TodoList>
-                <CreateTodoButton />
-
-                {
-                    openModal && (
-                        <Modal />
-                    )
-                }
-
-            </div>
-        </main>
-    )
+        {openModal && <Modal />}
+      </div>
+    </main>
+  );
 }
 
 export { AppUI };

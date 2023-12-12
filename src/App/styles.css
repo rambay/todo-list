@@ -6,6 +6,7 @@
     display: grid;
     height: 100%;
     grid-template-columns: auto auto;
+    grid-template-rows: 550px;
     justify-content: center;
     align-content: center;
     column-gap: 40px;
@@ -16,6 +17,24 @@
     margin: 0;
     text-align: center;
     color: #fff;
+}
+
+.emptyTodos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 12px;
+}
+
+.emptyTodos svg {
+    fill: white;
+    font-size: 24px;
+}
+
+.emptyTodos__title {
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
 }
 
 @media screen and (max-width: 1024px) {
@@ -31,10 +50,11 @@
     }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 768px) {
     .app {
         padding: 40px;
         width: 100%;
+        height: 100%;
     }
 
     .title {

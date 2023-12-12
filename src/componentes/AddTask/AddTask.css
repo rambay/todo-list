@@ -55,7 +55,7 @@ button {
 }
 
 @media screen and (max-width: 800px) {
-    .addTask {
+    .AddTaskContainer {
         display: none;
     }
 
